@@ -1,0 +1,27 @@
+<p class="text-danger text-center"
+     *ngIf="authenticated;then greet">
+</p>
+
+<ng-template #greet>
+<h5 class="bg-primary text-warning">Hi! {{username}}</h5>
+</ng-template>
+<br/>
+<h4>Contacts List:</h4>
+
+<table>
+  <div *ngFor="let contact of contacts"
+       (click)="selectedContact(contact)">
+    <tr>
+      <td>
+        <a href="#" [routerLink]="['/show',contact.name]">
+          {{contact.name}}
+        </a>
+      </td>
+      <td>{{contact.email}}</td>
+      <td>{{contact.phone}}</td>
+    </tr>
+
+
+    </div>
+</table>
+

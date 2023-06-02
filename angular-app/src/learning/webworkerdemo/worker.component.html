@@ -1,0 +1,9 @@
+<div class="bg-warning text-center form-input">
+    Enter your value for factorial calculation <br/>
+    <input type="number" [(ngModel)]="factorialinput"
+    (change) = "calculateFactorial()"/>
+</div>
+
+<h3 class="bg-dark text-info text-center">
+    The Factorial is : {{factorialresult}}
+</h3>

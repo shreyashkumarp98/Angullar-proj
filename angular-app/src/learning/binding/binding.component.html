@@ -1,0 +1,20 @@
+<div >
+    <h2 class ="bg-info"> Binding in Angular </h2>
+    Enter username : <input type="text" [(ngModel)]="username" />
+    Username : {{ username }}
+
+    <h4>Our Courses</h4>
+    <li *ngFor="let item of items let i=index" (click)="onItemClicked(item)">
+        {{i+1}} - {{item.id}} - {{item.name}}  -{{item.fee}}
+    </li>
+
+    <div *ngIf="clicked; then show else warn"></div>
+    <ng-template #show>
+        you have selected: 
+        <input type="text" [(ngModel)]="clickeditem.name"/>
+    </ng-template>
+
+    <ng-template #warn>
+        <h3 class="text-danger">Please Select a course to enroll</h3>
+    </ng-template>
+</div>

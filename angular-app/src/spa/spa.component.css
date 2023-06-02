@@ -1,0 +1,9 @@
+a {
+    background-color: lightgray;
+    margin:10px;
+}
+
+a:hover {
+    background-color: yellow;
+}
+

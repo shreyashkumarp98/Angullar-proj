@@ -1,0 +1,57 @@
+<h1 style="background:black;color:yellow;text-align:center">
+  Demo on Primeng library in Angular</h1>
+  username: <input type="text" pInputText [(ngModel)]="value" />
+  <br/>
+  <div class="flex flex-column gap-2">
+    <label htmlFor="username">Username</label>
+    <input pInputText id="username" aria-describedby="username-help" [(ngModel)]="value" />
+    <small id="username-help">Enter your username to reset your password.</small>
+  </div>
+  
+  <br/>
+  <span class="p-input-icon-right">
+    <i class="pi pi-search"></i>
+  Search  <input type="text" pInputText [(ngModel)]="item" />
+  </span>
+  <p-accordion>
+    <p-accordionTab header="Salads">
+      Salads...
+    </p-accordionTab>
+    <p-accordionTab header="Pasta">
+      Pasta...
+    </p-accordionTab>
+    <p-accordionTab header="Pizza" [selected]="true">
+      <div>
+        <p-radioButton
+          label="Double cheese"
+          name="pizza"
+          value="double-cheese"
+          [(ngModel)]="pizzaSelection">
+        </p-radioButton>
+      </div>
+  
+      <div>
+        <p-radioButton
+          label="Anchovy"
+          name="pizza"
+          value="anchovy"
+          [(ngModel)]="pizzaSelection">
+        </p-radioButton>
+      </div>
+  
+      <div>
+        <p-radioButton
+          label="Meatlover's"
+          name="pizza"
+          value="meat-lover"
+          [(ngModel)]="pizzaSelection">
+        </p-radioButton>
+      </div>
+    </p-accordionTab>
+  </p-accordion>
+  
+  <p-panel header="Extras" *ngIf="pizzaSelection && pizzaSelection.length">
+    Would you like extra cheese on your pizza?
+    <button pButton type="button" label="Ok, yeah!"></button>
+  </p-panel>
+  
