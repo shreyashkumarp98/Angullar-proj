@@ -1,0 +1,10 @@
+<div class= "bg-warning text-center">
+    <h2>{{title}}</h2>
+<ag-grid-angular
+    style="width: 500px; height: 350px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData | async"
+    [columnDefs]="columnDefs"
+    rowSelection="multiple">
+</ag-grid-angular>
+</div>

@@ -18,6 +18,8 @@ import { SPAComponent } from 'src/spa/spa.component';
 import { CalclibModule } from 'calclib';
 import { WorkerComponent } from 'src/learning/webworkerdemo/worker.component';
 import { SquarePipe } from 'src/learning/pipes/square.pipe';
+import { GridComponent } from 'src/learning/grid/grid.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 
 
@@ -33,7 +35,8 @@ import { SquarePipe } from 'src/learning/pipes/square.pipe';
     WorkerComponent,
 
 
-    SquarePipe
+    SquarePipe,
+    GridComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { SquarePipe } from 'src/learning/pipes/square.pipe';
     HttpClientModule,
     ReactiveFormsModule,
     SPAModule,
-    CalclibModule
+    CalclibModule,
+    AgGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
